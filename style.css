@@ -1,0 +1,10 @@
+*{
+    background:url("./pngs/background-day.png");
+    background-size: contain;
+}
+#canvas{
+    border:1px solid black
+}
+div{
+    display: none;
+}
