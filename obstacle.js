@@ -1,5 +1,5 @@
 class Obstacles{
-    constructor(speed){
+    constructor(){
         this.width=60
         this.height1=Math.floor(Math.random()*(450-30))+30
         this.gap=120
@@ -12,7 +12,7 @@ class Obstacles{
         this.downimage=new Image()
         this.downimage.src="./pngs/pipe-green.png"
         this.passed=false;
-        this.speed=speed
+        this.speed=2
     }
     draw(ctx){
         ctx.drawImage(this.upimage,this.x, this.y1, this.width, this.height1);
