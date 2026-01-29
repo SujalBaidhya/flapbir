@@ -18,6 +18,7 @@ class Bird {
         }
         this.isDead = false
         this.score = 0
+        this.status="start"
     }
     get top() {
         return this.position.y
@@ -30,6 +31,13 @@ class Bird {
     }
     get bottom() {
         return this.position.y + this.size.height
+    }
+    reset(){
+        console.log("called")
+        this.score=0
+        this.isDead=false
+        this.position.y=300
+        this.diry=1
     }
     draw(ctx) {
         delay++
@@ -45,6 +53,7 @@ class Bird {
     collision() {
         if (this.bottom > canvas.height || this.top < 0) {
             this.isDead = true
+            this.status="restart"
         }
     }
     update() {
