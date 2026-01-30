@@ -86,7 +86,6 @@ function score(){
 }
 document.body.addEventListener("keyup",jump)
 function gameloop(time){
-console.log(bird.status)
     if(bird.isDead){
         if (bird.score > highScore) {
             highScore = bird.score
@@ -100,7 +99,7 @@ console.log(bird.status)
     ctx.clearRect(0,0,canvas.width,canvas.height)
      if (bird.status == "start") {
         obstacles=[]
-        lastTime=0
+        // lastTime=0
         drawStartScreen()
         requestAnimationFrame(gameloop)
         return
@@ -109,7 +108,6 @@ console.log(bird.status)
     lastTime=time
     counter+=adder
     if(counter>gap){
-        console.log("called")
         obstacles.push(new Obstacles())
         counter=0
         if(gap>900){

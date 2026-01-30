@@ -33,7 +33,6 @@ class Bird {
         return this.position.y + this.size.height
     }
     reset(){
-        console.log("called")
         this.score=0
         this.isDead=false
         this.position.y=300
